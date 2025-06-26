@@ -1,15 +1,19 @@
-name: My Workflow
+name: "My Workflow"
+
 on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Optional input parameter'
+        description: "Optional input parameter"
         required: false
+
 jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Run a step
-        run: echo "Running workflow with input: ${{ github.event.inputs.name }}" 
+        # Wrap the entire command in double-quotes; ${ { … } } is fine inside
+        run: echo "Running workflow with input: ${{ github.event.inputs.name }}"
