@@ -1,5 +1,5 @@
 ---
-name: SSE-AUTODEPLOY-DUMMY
+name: SSE-AUTODEPLOY-DUMMY1
 on:
   workflow_dispatch:
     inputs:
