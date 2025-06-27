@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Name to greet"
+        description: "Name to greet okkk you goy iyb know"
         required: false
         default: "Guest"
 
