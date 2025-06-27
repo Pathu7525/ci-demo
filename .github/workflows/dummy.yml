@@ -1,3 +1,5 @@
+name: Greet on Dispatch
+
 on:
   workflow_dispatch:
     inputs:
@@ -5,3 +7,11 @@ on:
         description: "Name to greet"
         required: false
         default: "Guest"
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: |
+          echo "Hello, ${{ github.event.inputs.name }}!"
